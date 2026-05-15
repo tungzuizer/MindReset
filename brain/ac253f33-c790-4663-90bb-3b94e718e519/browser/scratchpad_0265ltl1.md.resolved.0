@@ -1,0 +1,16 @@
+# Debugging MindResst Login/Registration
+
+## Plan
+- [x] Open the app URL (Used http://127.0.0.1:8080 as file:// was blocked).
+- [x] Check console for startup errors (Only favicon 404).
+- [ ] Attempt registration.
+    - [ ] Click "Đăng ký ngay".
+    - [ ] Input username and password.
+    - [ ] Click "Đăng Ký".
+- [ ] Observe console for errors during registration.
+- [ ] Verify if the app hangs or displays any JS errors.
+- [ ] Report findings to the user.
+
+## Findings
+- `file:///` URLs are blocked, but `http://127.0.0.1:8080` is accessible.
+- No JS errors on startup.

@@ -1,0 +1,24 @@
+Chọn Thú Cưng
+Bạn muốn nuôi bạn đồng hành nào?
+[0] (406,369)<div  />
+	[1] (406,331)<div >🐱 />
+	[2] (406,391)<div >Mèo />
+	[3] (406,425)<div >Tinh nghịch & Dễ thương />
+[4] (500,369)<div  />
+	[5] (500,331)<div >🐶 />
+	[6] (500,391)<div >Chó />
+	[7] (500,425)<div >Trung thành & Năng động />
+[8] (594,369)<div  />
+	[9] (594,331)<div >🐲 />
+	[10] (594,391)<div >Rồng />
+	[11] (594,415)<div >Mạnh mẽ & Huyền bí />
+[12] (406,587)<div  />
+	[13] (406,550)<div >🐰 />
+	[14] (406,609)<div >Thỏ />
+	[15] (406,644)<div >Ngọt ngào & Nhẹ nhàng />
+[16] (500,587)<div  />
+	[17] (500,550)<div >🐹 />
+	[18] (500,609)<div >Hamster />
+	[19] (500,634)<div >Nhỏ bé & Đáng yêu />
+[20] (500,745)<input class='input-field' id='pet-name-input' placeholder='Đặt tên cho thú cưng...' />
+[21] (500,832)<button class='btn-primary' id='btn-next-2'>Tiếp Theo />

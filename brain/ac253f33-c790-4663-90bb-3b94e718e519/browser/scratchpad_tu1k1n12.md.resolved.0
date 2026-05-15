@@ -1,0 +1,13 @@
+# Task: Check for console errors in index.html
+
+## Plan
+1. Open the local URL: `file:///C:/Users/tungh/.gemini/antigravity/scratch/digital-detox-pet/index.html`.
+2. Capture console logs.
+3. Identify any error messages and line numbers.
+4. Report the findings.
+
+## Progress
+- [ ] Open index.html
+- [ ] Capture console logs
+- [ ] Identify errors
+- [ ] Report findings

@@ -1,0 +1,25 @@
+# Walkthrough: Hệ thống Lịch sử & Thành tựu
+
+Phase 4 đã mang lại tính ổn định cao hơn cho dữ liệu và hệ thống phần thưởng danh hiệu cho người dùng.
+
+## 1. Lưu trữ Lịch sử Chính xác
+Hệ thống lưu trữ đã được cập nhật logic `loadState()`:
+- **Trước khi reset ngày mới:** Toàn bộ thời gian sử dụng TikTok của ngày hôm qua (`todayUsage`) sẽ được lưu vào bộ nhớ lịch sử (`history`).
+- **Hiển thị biểu đồ:** Biểu đồ 7 ngày hiện tại sẽ lấy dữ liệu thực tế từ lịch sử, giúp người dùng theo dõi chính xác tiến trình detox của mình qua thời gian.
+
+## 2. Hệ thống Thành tựu (Achievements)
+Bổ sung mảng `ACHIEVEMENTS` với 5 danh hiệu khởi đầu:
+- **Bậc Thầy Detox (🏆):** Dành cho người có Streak 7 ngày.
+- **Người Yêu Thú Cưng (💖):** Khi Pet đạt Level 10.
+- **Chuyên Gia Nhiệm Vụ (🎯):** Hoàn thành tổng cộng 50 nhiệm vụ.
+- **Kỷ Luật Thép (🛡️):** Hoàn thành nhiệm vụ đặc biệt không dùng TikTok cả ngày.
+- **Triệu Phú MindResst (💰):** Khi sở hữu trên 1000 Coins.
+
+## 3. Giao diện Thành tựu
+- Một khu vực mới mang tên **Thành Tựu** đã được thêm vào trang Home, ngay phía dưới phần Nhiệm vụ nhanh.
+- Các huy hiệu được hiển thị dưới dạng Badge lấp lánh với biểu tượng và tên danh hiệu.
+- Hệ thống sẽ tự động kiểm tra điều kiện và "nổ" Confetti kèm thông báo Toast khi bạn mở khóa một thành tựu mới.
+
+## 4. Kiểm tra (Testing)
+- Thử cày XP để Pet đạt Level 10: Xác nhận huy hiệu "Người Yêu Thú Cưng" xuất hiện trên trang Home.
+- Kiểm tra mã nguồn: Xác nhận logic lưu history đã được chèn vào trước phần reset `todayUsage = 0`.

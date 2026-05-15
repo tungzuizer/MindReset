@@ -1,0 +1,26 @@
+# Kế Hoạch Chống Gian Lận Nhiệm Vụ
+
+Để ngăn người dùng bấm hoàn thành hàng loạt nhiệm vụ mà không thực sự làm, tôi đề xuất thiết kế lại hệ thống Nhiệm vụ như sau:
+
+## 1. Phân loại lại Nhiệm Vụ
+Chúng ta sẽ chia nhiệm vụ thành 2 loại chính:
+
+### A. Nhiệm Vụ Tính Giờ (Timer Tasks)
+- **Ví dụ**: Đọc sách 30 phút, Tập thể dục 15 phút.
+- **Cơ chế**: Thay vì một vòng tròn để bấm (✓) hoàn thành ngay, chúng ta sẽ có nút **"▶️ Bắt đầu"**. 
+- Khi bấm bắt đầu, hệ thống sẽ lưu thời gian và hiển thị thanh tiến trình đếm ngược (ví dụ 30 phút).
+- Người dùng không thể nhận thưởng cho đến khi thời gian đếm ngược kết thúc. Khi xong, nút sẽ đổi thành **"🎁 Nhận thưởng"**.
+
+### B. Nhiệm Vụ Tự Động (Auto-verified Tasks)
+- Các nhiệm vụ liên quan đến việc sử dụng ứng dụng sẽ **tự động kiểm tra** thay vì cho phép người dùng tự bấm.
+- **Không dùng TikTok 2 giờ liên tục**: Hệ thống sẽ tự động đo thời gian kể từ lần cuối bạn dùng TikTok (hoặc khi bấm Dừng Timer). Đủ 2 giờ (hiển thị % tiến trình), nút "Nhận thưởng" mới sáng lên.
+- **Dưới giới hạn hôm nay**: Nhiệm vụ này có thể đổi thành "Hoàn thành ngày dưới giới hạn" (Sẽ được tự động phát thưởng vào ngày hôm sau nếu ngày hôm trước không vượt quá số phút quy định). Hoặc nếu muốn nhận ngay, nó sẽ chỉ mở khóa vào cuối ngày (VD: sau 9h tối).
+- **Hoàn thành 3 phiên nghỉ**: Tự động liên kết với tính năng Nghỉ bắt buộc. Đủ 3 lần hệ thống mới cho nhận thưởng.
+- **Cho thú cưng ăn**: Sẽ tự động hoàn thành ngay khi bạn vào Cửa Hàng và mua 1 món đồ ăn.
+
+## 2. Lưu trữ Trạng thái (State)
+- Thêm thuộc tính `activeTasks` vào `state` để lưu các nhiệm vụ đang chạy thời gian (bao gồm ID nhiệm vụ và thời điểm bắt đầu).
+
+## User Review Required
+Bạn có đồng ý với cơ chế này không?
+- Bạn có muốn tôi thiết lập một vài nhiệm vụ bấm tính giờ (ví dụ: Đọc sách 10 phút để test cho nhanh) và chuyển các nhiệm vụ còn lại thành tự động (khóa lại cho đến khi đủ điều kiện) không?

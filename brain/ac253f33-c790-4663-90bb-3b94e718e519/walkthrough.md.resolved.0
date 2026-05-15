@@ -1,0 +1,26 @@
+# MindResst Authentication Flow
+
+I have completed the implementation of the simulated client-side authentication system.
+
+## Changes Made
+- **UI Added**: Created an elegant `auth-container` overlay with a gradient text header, styled matching the app's dark-mode aesthetic.
+- **Login & Register Forms**: Implemented toggling between Login and Registration forms directly on the starting screen.
+- **Data Persistence**: We are now using `localStorage` to simulate a database.
+  - `ddp_users`: Stores credentials `{"username": "password"}`.
+  - `ddp_currentUser`: Stores the current active session token.
+  - `ddp_state_[username]`: Stores the user's specific progression, timer state, and pet data.
+- **Onboarding Flow Updated**: 
+  - The username input field has been removed from the Onboarding Welcome step, as the user now provides their username during registration.
+  - The logic now routes automatically: Auth → Onboarding (if first login) → Main App.
+- **Logout Feature**: Added a "Đăng Xuất" (Logout) button to the Settings modal which securely clears the active session and reloads the application.
+
+## Verification
+1. To test, open the browser preview.
+2. You should immediately see the Login Screen.
+3. Click "Đăng ký ngay" (Register Now) to create an account.
+4. Log in with your new credentials.
+5. You will be sent to the Onboarding process without needing to re-enter your username.
+6. Once inside the app, check Settings (⚙️) to ensure the Logout function works.
+
+>[!TIP]
+> The Reset button will now safely clear only the current logged-in user's progression data, instead of erasing everyone's data.

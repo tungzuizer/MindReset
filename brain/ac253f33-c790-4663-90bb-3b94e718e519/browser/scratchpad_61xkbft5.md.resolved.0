@@ -1,0 +1,15 @@
+# Digital Detox Pet Testing
+
+## Task Checklist
+- [x] Open the application URL (http://127.0.0.1:8080/)
+- [x] Navigate to the registration form
+- [ ] Register a new account "testuser" with password "password"
+- [ ] Verify success toast and switch to login form
+- [ ] Log in with "testuser" / "password"
+- [ ] Report results
+
+## Findings
+- Application opened successfully at http://127.0.0.1:8080/
+- Navigation to registration form worked.
+- Attempted registration but the form remains and no toast is visible.
+- Console logs are empty.

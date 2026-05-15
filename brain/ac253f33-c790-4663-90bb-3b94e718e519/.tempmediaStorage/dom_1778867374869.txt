@@ -1,0 +1,68 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🐱
+testuser
+Lv. 1
+🪙
+0
+[0] (690,49)<button aria-label='Settings' class='btn-icon' id='btn-settings'>⚙️ />
+🏆 Bảng Xếp Hạng
+[1] (392,221)<button class='rank-tab active'>🌍 Toàn Cầu />
+[2] (608,221)<button class='rank-tab'>👥 Bạn Bè />
+[3] (318,292)<button class='cat-btn active'>Level />
+[4] (388,292)<button class='cat-btn'>Streak />
+[5] (468,292)<button class='cat-btn'>Nhiệm vụ />
+🥇
+🐲
+Minh
+Lv.15
+🥈
+🐱
+Linh
+Lv.12
+🥉
+🐶
+Hùng
+Lv.10
+4
+🐰
+Trang
+Bông • Lv.9
+Lv.9
+5
+🐹
+Đức
+Ham • Lv.8
+Lv.8
+6
+🐱
+Hà
+Kitty • Lv.7
+Lv.7
+7
+🐲
+Nam
+Shenron • Lv.6
+Lv.6
+[6] (310,943)<button class='nav-item' id='nav-home' />
+	[7] (310,932)<span >🏠 />
+	[8] (310,966)<span >Nhà />
+[9] (374,943)<button class='nav-item' id='nav-timer' />
+	[10] (374,932)<span >⏱️ />
+	[11] (374,966)<span >Timer />
+[12] (447,943)<button class='nav-item' id='nav-tasks'>Nhiệm Vụ />
+	[13] (447,932)<span >✅ />
+	Nhiệm Vụ
+[14] (529,943)<button class='nav-item' id='nav-store'>Cửa Hàng />
+	[15] (529,932)<span >🛒 />
+	Cửa Hàng
+[16] (611,943)<button class='nav-item active' id='nav-ranking'>Xếp Hạng />
+	[17] (611,932)<span >🏆 />
+	Xếp Hạng
+[18] (687,943)<button class='nav-item' id='nav-friends' />
+	[19] (687,932)<span >👥 />
+	[20] (687,966)<span >Bạn Bè />
+
+</current_dom>

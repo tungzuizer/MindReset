@@ -1,0 +1,34 @@
+# Implement Authentication Flow
+
+The goal is to implement a simulated client-side login and registration system for the MindResst app before the user can access the main features.
+
+## Proposed Changes
+
+### `index.html`
+- [NEW] Add an `auth-container` with two forms: Login and Register.
+  - **Login Form**: Username, Password, Login Button, Link to switch to Register.
+  - **Register Form**: Username, Password, Confirm Password, Register Button, Link to switch to Login.
+- Modify the visibility logic so that `auth-container` is shown first if the user is not authenticated.
+
+### `style.css`
+- [NEW] Add styles for the authentication container, forms, inputs, and toggle buttons.
+
+### `app.js`
+- [MODIFY] Update the initialization logic (`init()`) to check for an authenticated user.
+  - If no user is logged in, show the Auth screen.
+  - If a user logs in or registers successfully, save their session in `localStorage` and then proceed to Onboarding or Main App.
+- [NEW] Implement authentication functions:
+  - `registerUser(username, password)`: Validate and save to a simulated `users` database in `localStorage`.
+  - `loginUser(username, password)`: Verify credentials against the `users` database.
+  - `logoutUser()`: Clear the current session.
+
+## User Review Required
+
+- This will be a **simulated client-side authentication** using `localStorage`. No real backend or database is attached. Is this acceptable for your current needs?
+- Do you want to remove the username input from the Onboarding step 1, since the user will already provide their username during registration?
+
+## Verification Plan
+1. Test opening the app - it should display the Login screen.
+2. Test Register flow - create an account and ensure it logs the user in.
+3. Test Login flow - log out and log back in with the created account.
+4. Ensure the onboarding only appears after registration/login if not completed.

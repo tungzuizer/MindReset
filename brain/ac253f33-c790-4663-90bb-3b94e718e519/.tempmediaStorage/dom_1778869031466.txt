@@ -1,0 +1,15 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🌿
+MindResst
+Chào mừng bạn trở lại!
+[0] (502,441)<label  />
+[1] (500,495)<input class='input-field' id='login-username' placeholder='Nhập tên đăng nhập' />
+[2] (502,559)<label  />
+[3] (500,614)<input class='input-field' id='login-password' placeholder='Nhập mật khẩu' />
+[4] (500,703)<button class='btn-primary w-100' />
+[5] (554,786)<a href='#' id='link-register' />
+
+</current_dom>

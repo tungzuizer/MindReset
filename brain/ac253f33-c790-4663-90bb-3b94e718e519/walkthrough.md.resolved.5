@@ -1,0 +1,23 @@
+# Walkthrough: Nhật ký Detox & Theo dõi Cảm xúc
+
+Phase 5 đã biến MindResst thành một công cụ hỗ trợ tinh thần thực thụ bằng cách cho phép người dùng ghi chép lại hành trình của mình.
+
+## 1. Tính năng Nhật ký (Daily Journal)
+- Một khu vực **Nhật ký Detox** mới đã được thêm vào cuối trang Home.
+- Người dùng có thể nhấn vào **"+ Viết mới"** để mở modal nhập nhật ký.
+- Hệ thống lưu trữ tối đa 30 ghi chú gần nhất, giúp bạn xem lại quá trình thay đổi tâm lý của mình.
+
+## 2. Theo dõi Cảm xúc (Mood Tracker)
+- Trong modal Nhật ký, người dùng có thể chọn một trong 5 trạng thái cảm xúc: 🤩 (Tuyệt vời), 😊 (Vui), 😐 (Bình thường), 😫 (Mệt mỏi), 💪 (Quyết tâm).
+- Biểu tượng cảm xúc này sẽ được lưu kèm với ghi chú và hiển thị rõ ràng trong danh sách nhật ký.
+
+## 3. Giao diện & Trải nghiệm (UI/UX)
+- Giao diện nhật ký sử dụng phong cách **Glassmorphism** đồng bộ với toàn bộ ứng dụng.
+- Các ghi chú được sắp xếp theo thời gian (mới nhất ở trên cùng).
+- Có thông báo Toast xác nhận khi lưu thành công và cảnh báo nếu người dùng bỏ trống nội dung.
+
+## 4. Kiểm tra (Testing)
+- Truy cập trang Home -> Cuộn xuống dưới cùng -> Bấm "Viết mới".
+- Chọn cảm xúc 💪 và nhập "Hôm nay tôi đã không dùng TikTok quá 15 phút, cảm thấy rất tự hào!".
+- Bấm "Lưu Nhật Ký": Xác nhận thông báo thành công và ghi chú xuất hiện ngay lập tức trong danh sách.
+- F5 trang: Xác nhận nhật ký vẫn còn đó (đã lưu vào `localStorage`).

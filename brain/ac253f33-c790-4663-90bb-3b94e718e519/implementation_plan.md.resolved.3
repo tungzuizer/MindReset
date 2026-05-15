@@ -1,0 +1,37 @@
+# Kế hoạch phát triển tiếp theo (Phase 3)
+
+Hiện tại ứng dụng đang chạy ổn định (không có lỗi console, các tính năng cốt lõi như Nhiệm vụ chống gian lận, Cửa hàng và Onboarding đều đã hoạt động). Bước tiếp theo chúng ta sẽ tập trung vào sự gắn kết và tính xã hội của ứng dụng.
+
+## Mục tiêu
+
+1. **Hệ thống Tiến hóa (Pet Evolution):** Thú cưng sẽ thay đổi hình dạng (emoji) khi đạt đến các mốc Level cụ thể.
+2. **Tính năng Bạn bè (Friends):** Xử lý gửi/nhận kết bạn, xem thú cưng của bạn bè.
+3. **Bảng Xếp Hạng (Leaderboard):** Sắp xếp xếp hạng dựa trên tổng điểm kinh nghiệm (XP) hoặc thời gian không dùng mạng xã hội.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Bạn có muốn thú cưng tiến hóa ở các cấp độ nào? Hiện tại tôi đề xuất các mốc: Level 5, Level 10 và Level 15.
+> Ngoài ra, đối với Bảng xếp hạng, bạn muốn xếp hạng theo số XP hay xếp hạng theo Số ngày giữ Streak?
+
+## Proposed Changes
+
+### `app.js`
+
+#### [MODIFY] app.js
+- Cập nhật hàm `addXP()` để xử lý Level Up. Khi Level đạt mốc tiến hóa (VD: 5, 10), thay đổi emoji của thú cưng theo mảng `PETS[type].evolutions`.
+- Hoàn thiện hàm `renderRanking()` để tự động sắp xếp mảng `MOCK_USERS` kết hợp với dữ liệu `state` hiện tại của người dùng.
+- Hoàn thiện tính năng tìm kiếm bạn bè trong tab Bạn bè.
+
+### `index.html` / `style.css`
+
+#### [MODIFY] Màn hình tiến hóa
+- Thêm hiệu ứng đặc biệt hoặc âm thanh khi người dùng đạt cấp độ tiến hóa. (Đã có sẵn modal Level Up, sẽ nâng cấp thêm hiệu ứng).
+
+## Verification Plan
+
+### Manual Verification
+- Cày điểm XP cho thú cưng bằng cách hoàn thành nhiệm vụ.
+- Đạt Level 5 và xác nhận thú cưng thay đổi hình dáng (ví dụ từ 🐱 thành 😺).
+- Chuyển sang tab Xếp hạng và xem tên mình có đang được sắp xếp đúng thứ hạng hay không.
+- Chuyển sang tab Bạn bè, tìm kiếm một cái tên ngẫu nhiên và bấm "Gửi Lời Mời".

@@ -1,0 +1,35 @@
+# Walkthrough: Hệ Thống Anti-Cheat Nhiệm Vụ
+
+Hệ thống nhiệm vụ đã được tái cấu trúc hoàn toàn để chống gian lận, thay đổi từ cơ chế "bấm là nhận" sang cơ chế tự động xác thực và yêu cầu thời gian chờ (timer).
+
+## 1. Phân loại và Giao diện trạng thái Nhiệm vụ (UI)
+Các loại nhiệm vụ mới bao gồm: `auto_no_use`, `auto_breaks`, `auto_under_limit`, `auto_feed_pet`, và `timer`.
+Giao diện (`renderTasks` trong `app.js` và `style.css`) đã được cập nhật để phản ánh trạng thái của từng nhiệm vụ:
+- **Locked (🔒):** Nhiệm vụ tự động (chưa đạt điều kiện), người dùng không thể tự bấm hoàn thành.
+- **Play (▶️):** Nhiệm vụ đếm thời gian (VD: Đọc sách 30 phút). Bấm để bắt đầu tính giờ.
+- **Timer (⏳):** Đang trong thời gian chạy (Hiển thị đồng hồ đếm ngược `MM:SS`).
+- **Claim (🎁):** Đã hoàn thành thời gian đếm ngược, người dùng có thể bấm để nhận thưởng.
+- **Done (✓):** Đã nhận thưởng.
+
+## 2. Logic xử lý Đếm Ngược (Timer Tasks)
+Khi người dùng bấm vào nhiệm vụ dạng `Play (▶️)`, thời điểm bắt đầu được lưu vào `state.tasks.activeTasks[taskId] = Date.now()`.
+Một vòng lặp `setInterval` chạy mỗi giây sẽ kiểm tra các task đang hoạt động:
+- Tính thời gian còn lại: `duration - (Date.now() - activeTime) / 1000`.
+- Cập nhật thời gian trên giao diện (`MM:SS`).
+- Chuyển sang trạng thái `Claim (🎁)` khi đếm ngược kết thúc.
+
+## 3. Hệ thống Tự Động Hoàn Thành (Auto Tasks)
+Hàm `evaluateAutoTasks()` được thêm vào và thực thi ngầm định kỳ:
+- **Không dùng TikTok 2 giờ:** Kiểm tra `state.timer.lastNoUseStart`.
+- **Dưới giới hạn:** Tự động trao thưởng nếu qua 22:00 và `todayUsage <= limit`.
+- **Nghỉ giải lao:** Kiểm tra số lần nghỉ ép buộc (`breakCount >= 3`).
+- **Cho thú cưng ăn:** Tự động hoàn thành ngay khi mua đồ ăn trong cửa hàng (Kích hoạt trực tiếp trong hàm mua Store).
+
+## 4. Xử lý Lỗi Bất Ngờ
+Trong quá trình code, một thao tác đã vô tình xóa nhầm một phần lớn file `style.css` (bao gồm CSS cho Chart, Ranking, Friends, Tasks). Tôi đã phải tái tạo lại toàn bộ file CSS từ lịch sử bộ nhớ để khôi phục hoàn chỉnh ứng dụng mà không gây thất thoát dữ liệu hiển thị.
+
+## 5. Xác thực (Testing)
+- Thử bấm vào nhiệm vụ tự động: Thông báo Toast "Nhiệm vụ này sẽ tự động hoàn thành...".
+- Thử bắt đầu tính giờ một nhiệm vụ (VD Đọc sách): Đếm ngược xuất hiện, thông báo "Đã bắt đầu tính giờ".
+- Hoàn thành mua Đồ ăn trong Cửa hàng: Nhiệm vụ "Cho thú cưng ăn" tự động hoàn thành và rơi Confetti.
+- Giao diện Pet, Cửa hàng và Bảng xếp hạng vẫn hoạt động tốt như trước.

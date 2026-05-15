@@ -1,0 +1,21 @@
+# Debugging MindResst Login/Registration
+
+## Plan
+- [x] Open the app URL (Used http://127.0.0.1:8080 as file:// was blocked).
+- [x] Check console for startup errors (Only favicon 404).
+- [x] Attempt registration.
+    - [x] Click "Đăng ký ngay".
+    - [x] Input username and password.
+    - [x] Click "Tạo Tài Khoản" (tried button click and Enter key).
+- [ ] Observe console for errors during registration.
+- [ ] Verify if the app hangs or displays any JS errors.
+- [ ] Report findings to the user.
+
+## Findings
+- `file:///` URLs are blocked, but `http://127.0.0.1:8080` is accessible.
+- No JS errors on startup.
+- Registration attempt (clicking "Tạo Tài Khoản") does absolutely nothing:
+    - No console errors.
+    - No DOM changes.
+    - No page navigation.
+    - The button click appears to be unresponsive.

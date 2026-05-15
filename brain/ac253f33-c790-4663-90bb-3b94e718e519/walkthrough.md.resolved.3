@@ -1,0 +1,25 @@
+# Walkthrough: Hệ thống Tiến hóa & Tính năng Xã hội
+
+Phase 3 đã hoàn thành với các nâng cấp về trải nghiệm người dùng và tính tương tác.
+
+## 1. Hệ thống Tiến hóa Thú cưng (Pet Evolution)
+Thú cưng giờ đây sẽ thay đổi diện mạo (emoji) tại các mốc Level quan trọng:
+- **Level 1-4:** Hình dạng cơ bản (VD: 🐱).
+- **Level 5-9:** Tiến hóa cấp 1 (VD: 😺).
+- **Level 10-14:** Tiến hóa cấp 2 (VD: 🐈).
+- **Level 15+:** Tiến hóa tối thượng (VD: 🦁).
+Khi đạt mốc tiến hóa, thông báo Level Up sẽ có hiệu ứng **Evolution Glow** (ánh sáng vàng lấp lánh) và nội dung chúc mừng đặc biệt.
+
+## 2. Bảng Xếp Hạng Chính Xác (Fine-grained Ranking)
+- Thay vì chỉ xếp theo Level, hệ thống hiện tại sử dụng **XP (Điểm kinh nghiệm)** làm tiêu chí xếp hạng chính. Điều này giúp phân loại thứ hạng chính xác hơn giữa các người dùng cùng Level.
+- Giao diện bảng xếp hạng hiển thị chi tiết số XP bên cạnh Level để người dùng dễ theo dõi khoảng cách với người đứng đầu.
+
+## 3. Tìm kiếm và Kết bạn (Friends Search)
+- Tính năng **Thêm bạn bè** đã được hiện thực hóa logic tìm kiếm.
+- Khi người dùng nhập tên bạn bè vào modal "Thêm Bạn Bè", hệ thống sẽ tìm kiếm trong danh sách người dùng hệ thống (`MOCK_USERS`).
+- Nếu tìm thấy, sẽ hiển thị thông báo gửi lời mời thành công. Nếu không, sẽ báo lỗi không tìm thấy người dùng.
+
+## 4. Kiểm tra (Testing)
+- Đăng nhập và cày XP để đạt Level 5: Xác nhận thú cưng biến hình và có hiệu ứng Glow.
+- Mở tab Xếp hạng: Xác nhận thứ hạng được sắp xếp theo XP (người nhiều XP hơn đứng trên dù cùng Level).
+- Mở tab Bạn bè -> Bấm "Thêm Bạn Bè" -> Nhập "Minh": Xác nhận thông báo gửi lời mời thành công.

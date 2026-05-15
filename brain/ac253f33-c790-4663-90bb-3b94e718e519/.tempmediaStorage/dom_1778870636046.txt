@@ -1,0 +1,10 @@
+Không thể truy cập trang web này
+localhost
+đã từ chối kết nối.
+Hãy thử:
+Kiểm tra kết nối
+[0] (339,487)<a href='#buttons'>Kiểm tra proxy và tường lửa />
+ERR_CONNECTION_REFUSED
+[1] (244,643)<button class='blue-button text-button' id='reload-button'>Tải lại />
+[2] (752,644)<button class='secondary-button text-button
+              small-link ' id='details-button'>Chi tiết />

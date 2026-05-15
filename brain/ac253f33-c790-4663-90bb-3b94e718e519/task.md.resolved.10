@@ -1,0 +1,5 @@
+- [/] Add `journal: []` to the default state in `app.js`
+- [ ] Add Journal UI (Card + Modal) in `index.html`
+- [ ] Implement `saveJournal()` and `renderJournal()` logic
+- [ ] Add styling for Journal cards in `style.css`
+- [ ] Verify functionality

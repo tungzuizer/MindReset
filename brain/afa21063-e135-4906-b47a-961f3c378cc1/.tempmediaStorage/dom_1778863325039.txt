@@ -1,0 +1,21 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+⏱️
+Giới Hạn TikTok
+Đặt thời gian tối đa sử dụng TikTok mỗi ngày
+[0] (363,466)<button class='limit-btn'>15 phút />
+[1] (462,466)<button class='limit-btn'>30 phút />
+[2] (553,466)<button class='limit-btn active'>1 giờ />
+[3] (641,466)<button class='limit-btn'>1.5 giờ />
+[4] (500,541)<button class='limit-btn'>2 giờ />
+⏸️ Nghỉ bắt buộc sau mỗi:
+[5] (354,680)<button class='break-btn'>10 phút />
+[6] (451,680)<button class='break-btn active'>15 phút />
+[7] (549,680)<button class='break-btn'>20 phút />
+[8] (646,680)<button class='break-btn'>30 phút />
+Bạn sẽ phải nghỉ 5 phút trước khi tiếp tục
+[9] (500,815)<button class='btn-primary' id='btn-start'>🚀 Bắt Đầu! />
+
+</current_dom>

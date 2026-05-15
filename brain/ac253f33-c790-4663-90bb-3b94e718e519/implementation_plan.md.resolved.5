@@ -1,0 +1,47 @@
+# Kế hoạch phát triển Phase 5: Nhật ký Detox & Cảm xúc
+
+Để ứng dụng không chỉ là công cụ theo dõi thời gian mà còn là người bạn đồng hành tinh thần, Phase 5 sẽ thêm tính năng Nhật ký để người dùng ghi lại hành trình vượt qua sự lệ thuộc vào mạng xã hội.
+
+## Mục tiêu
+
+1. **Nhật ký hàng ngày (Daily Journal):** Cho phép người dùng viết một ghi chú ngắn mỗi ngày.
+2. **Theo dõi cảm xúc (Mood Tracking):** Chọn biểu tượng cảm xúc (Vui, Bình thường, Mệt mỏi, v.v.) sau mỗi phiên detox.
+3. **Lưu trữ ghi chú:** Hiển thị lại các ghi chú cũ trong trang Thống kê/Lịch sử.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Bạn muốn nhập nhật ký vào lúc nào?
+> - Cách 1: Hiện lên sau mỗi khi kết thúc một phiên nghỉ (Break session).
+> - Cách 2: Một nút bấm riêng ở trang Home để bạn viết bất cứ lúc nào.
+> Tôi đề xuất Cách 2 kèm theo một lời nhắc nhở nhẹ nhàng ở trang Home.
+
+## Proposed Changes
+
+### `app.js`
+
+#### [MODIFY] State
+- Thêm `state.journal = []` để lưu trữ mảng các đối tượng `{ date, mood, note }`.
+
+#### [NEW] Logic Nhật ký
+- Hàm `saveJournal(mood, note)` để lưu dữ liệu.
+- Cập nhật UI để hiển thị lịch sử nhật ký.
+
+### `index.html`
+
+#### [NEW] UI Nhật ký
+- Thêm một Card "Nhật ký hôm nay" ở trang Home hoặc Timer.
+- Thêm Modal để nhập nội dung nhật ký.
+
+### `style.css`
+
+#### [NEW] Styling
+- Thiết kế giao diện cho các thẻ ghi chú nhật ký (phong cách Paper/Glassmorphism).
+
+## Verification Plan
+
+### Manual Verification
+- Bấm vào nút "Viết nhật ký".
+- Chọn cảm xúc và nhập nội dung.
+- Kiểm tra xem ghi chú có xuất hiện trong danh sách lịch sử hay không.
+- Đảm bảo dữ liệu được lưu lại sau khi F5 trang.

@@ -1,0 +1,18 @@
+# Digital Detox Pet Testing
+
+## Task Checklist
+- [x] Open the application URL (http://127.0.0.1:8080/)
+- [x] Navigate to the registration form
+- [ ] Register a new account "testuser" with password "password"
+- [ ] Verify success toast and switch to login form
+- [ ] Log in with "testuser" / "password"
+- [ ] Report results
+
+## Findings
+- Application opened successfully at http://127.0.0.1:8080/
+- Navigation to registration form worked initially, but subsequent attempts failed to switch views.
+- Observed browser validation messages ("Vui lòng điền vào trường này") when attempting to submit the login form, confirming that the browser is interacting with the DOM.
+- The "Đăng ký ngay" link (id='link-register') does not seem to trigger the view switch anymore.
+- The submit buttons ("Đăng Nhập" and "Tạo Tài Khoản") do not seem to have functional event listeners, or they are blocked by validation/other issues.
+- Console logs remain empty.
+- Navigation back and forth between forms seems flaky.

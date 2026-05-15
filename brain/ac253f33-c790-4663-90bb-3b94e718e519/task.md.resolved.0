@@ -1,0 +1,6 @@
+- [ ] Update `index.html` with `#auth-container` (Login & Register forms)
+- [ ] Remove `username-input` from `#onboarding` in `index.html`
+- [ ] Update `style.css` with auth styles
+- [ ] Update `app.js` to implement `registerUser`, `loginUser`, and simulate DB
+- [ ] Update `app.js` `init()` flow to route to Auth -> Onboarding -> App
+- [ ] Test the flow

@@ -1,0 +1,38 @@
+# Kế hoạch phát triển Phase 4: Lịch sử & Thành tựu
+
+Sau khi hoàn thiện hệ thống Tiến hóa và Xã hội, Phase 4 sẽ tập trung vào việc ghi nhận nỗ lực của người dùng thông qua dữ liệu lịch sử chính xác và các huy hiệu thành tựu (Achievements).
+
+## Mục tiêu
+
+1. **Lịch sử sử dụng chính xác:** Sửa lỗi không lưu dữ liệu `todayUsage` vào `history` khi qua ngày mới.
+2. **Hệ thống Thành tựu (Achievements):** Thêm các huy hiệu đặc biệt khi người dùng đạt được các cột mốc quan trọng (VD: Streak 7 ngày, Hoàn thành 50 nhiệm vụ, Pet đạt Level 10).
+3. **Màn hình Thành tựu:** Thêm một tab hoặc khu vực để xem các huy hiệu đã đạt được.
+
+## User Review Required
+
+> [!IMPORTANT]
+> Bạn muốn đặt tên cho các huy hiệu này là gì? Ví dụ: "Detox Master" cho 7 ngày streak, "Pet Lover" cho Level 10.
+> Ngoài ra, tôi có nên thêm tính năng "Nhật ký Detox" để bạn ghi lại cảm xúc mỗi ngày không?
+
+## Proposed Changes
+
+### `app.js`
+
+#### [MODIFY] loadState()
+- Lưu `state.timer.todayUsage` vào `state.timer.history[state.lastDate]` trước khi reset dữ liệu ngày mới.
+
+#### [NEW] Hệ thống Thành tựu
+- Định nghĩa mảng `ACHIEVEMENTS` với các điều kiện xác thực.
+- Hàm `checkAchievements()` chạy định kỳ để mở khóa huy hiệu.
+- Cập nhật UI để hiển thị danh sách huy hiệu.
+
+### `index.html`
+
+#### [MODIFY] Thêm Tab Thành tựu
+- Bổ sung tab "Thành tựu" trong trang cá nhân hoặc một khu vực riêng biệt.
+
+## Verification Plan
+
+### Manual Verification
+- Sử dụng console để "hack" thời gian qua ngày mới và kiểm tra xem Biểu đồ có hiển thị đúng cột dữ liệu của ngày hôm qua hay không.
+- Thử đạt các mốc điều kiện (như cày XP lên Level 10) và kiểm tra xem có nhận được Huy hiệu hay không.
