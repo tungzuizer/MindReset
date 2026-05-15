@@ -1,0 +1,64 @@
+/* FRIENDS */
+.friends-header{display:flex;gap:10px;margin-bottom:16px}
+.friend-search{flex:1}
+.friend-search .input-field{padding:12px 16px}
+.btn-add-friend{padding:12px 18px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:12px;color:#fff;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Nunito',sans-serif;font-size:13px}
+.friend-requests{margin-bottom:20px}
+.request-list,.friends-list,.feed-list{display:flex;flex-direction:column;gap:8px}
+.request-item{display:flex;align-items:center;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
+.request-avatar{font-size:32px}
+.request-info{flex:1}
+.request-name{font-weight:700;font-size:14px}
+.request-pet{font-size:12px;color:var(--text2)}
+.request-actions{display:flex;gap:6px}
+.btn-accept,.btn-reject{padding:8px 14px;border:none;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif}
+.btn-accept{background:var(--mint);color:#fff}
+.btn-reject{background:rgba(231,76,60,.2);color:var(--red)}
+.friend-item{display:flex;align-items:center;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
+.friend-avatar{font-size:32px}
+.friend-info{flex:1}
+.friend-name{font-weight:700;font-size:14px}
+.friend-status{font-size:12px;color:var(--text2)}
+.friend-level{padding:4px 10px;background:var(--glass);border-radius:12px;font-size:12px;font-weight:700;color:var(--purple)}
+.feed-item{padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:14px;display:flex;gap:10px}
+.feed-icon{font-size:24px}
+.feed-content{flex:1}
+.feed-text{font-size:13px;line-height:1.5}
+.feed-text strong{color:var(--purple)}
+.feed-time{font-size:11px;color:var(--text2);margin-top:4px}
+.friends-list-section{margin-bottom:20px}
+
+/* MODALS */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .2s}
+.modal{background:var(--bg);border:1px solid var(--border);border-radius:24px;width:100%;max-width:400px;overflow:hidden;animation:slideUp .3s ease}
+.modal-header{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid var(--border)}
+.modal-header h2{font-size:18px}
+.btn-close{background:none;border:none;color:var(--text);font-size:28px;cursor:pointer;padding:0 4px}
+.modal-body{padding:20px;display:flex;flex-direction:column;gap:14px}
+.modal-desc{font-size:14px;color:var(--text2)}
+.setting-group{display:flex;flex-direction:column;gap:6px}
+.setting-label{font-size:14px;font-weight:600}
+.range-input{width:100%;accent-color:var(--purple)}
+.range-value{font-size:13px;color:var(--purple);font-weight:700}
+
+/* LEVELUP MODAL */
+.levelup-modal{text-align:center;background:linear-gradient(180deg,rgba(108,92,231,.15),var(--bg))}
+.levelup-content{padding:40px 20px}
+.levelup-icon{font-size:60px;animation:bounce 1s infinite}
+.levelup-title{font-size:36px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:10px 0}
+.levelup-pet{font-size:72px;margin:16px 0}
+.levelup-text{font-size:16px;color:var(--text2);margin-bottom:16px}
+.levelup-rewards{font-size:14px;color:var(--gold);font-weight:700;margin-bottom:20px}
+
+/* TOAST */
+.toast-container{position:fixed;top:80px;right:20px;z-index:2000;display:flex;flex-direction:column;gap:8px}
+.toast{padding:14px 20px;border-radius:14px;font-size:14px;font-weight:600;animation:slideIn .3s ease;backdrop-filter:blur(10px);border:1px solid var(--border);max-width:300px}
+.toast.success{background:rgba(0,184,148,.15);color:var(--mint);border-color:rgba(0,184,148,.3)}
+.toast.warning{background:rgba(243,156,18,.15);color:var(--orange);border-color:rgba(243,156,18,.3)}
+.toast.error{background:rgba(231,76,60,.15);color:var(--red);border-color:rgba(231,76,60,.3)}
+.toast.info{background:rgba(108,92,231,.15);color:var(--purple);border-color:rgba(108,92,231,.3)}
+.confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:3000}
+
+/* PARTICLES */
+.floating-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;border-radius:50%;opacity:.4;animation:floatUp linear infinite}

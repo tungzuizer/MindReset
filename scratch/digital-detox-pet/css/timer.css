@@ -1,0 +1,46 @@
+/* TIMER WIDGET */
+.timer-widget{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;margin:0 0 16px}
+.timer-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.timer-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+.tiktok-logo{width:28px;height:28px;object-fit:contain}
+.timer-info{display:flex;flex-direction:column}
+.timer-title{font-weight:700;font-size:15px}
+.timer-usage{font-size:13px;color:var(--text2)}
+.timer-progress-ring{width:120px;height:120px;margin:0 auto 16px;position:relative}
+.progress-ring{width:100%;height:100%;transform:rotate(-90deg)}
+.progress-ring-bg{fill:none;stroke:var(--glass);stroke-width:8}
+.progress-ring-fill{fill:none;stroke:url(#grad1);stroke-width:8;stroke-linecap:round;stroke-dasharray:326.73;stroke-dashoffset:326.73;transition:stroke-dashoffset .5s ease}
+.progress-ring-fill-lg{fill:none;stroke:var(--purple);stroke-width:10;stroke-linecap:round;stroke-dasharray:552.92;stroke-dashoffset:552.92;transition:stroke-dashoffset .5s ease}
+.timer-ring-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.timer-percent{font-size:24px;font-weight:800;font-family:'Inter',sans-serif}
+.timer-actions{text-align:center}
+.btn-timer-start,.btn-timer-main{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:14px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:.3s;font-family:'Nunito',sans-serif}
+.btn-timer-start.active,.btn-timer-main.active{background:linear-gradient(135deg,var(--red),var(--pink))}
+.break-alert{text-align:center;padding:20px;background:rgba(243,156,18,.1);border:1px solid rgba(243,156,18,.3);border-radius:16px;margin-top:16px;animation:pulse 2s infinite}
+.break-alert-icon{font-size:40px;margin-bottom:8px}
+.break-alert-text{font-weight:600;margin-bottom:8px;color:var(--orange)}
+.break-countdown{font-size:32px;font-weight:800;font-family:'Inter',sans-serif;color:var(--orange)}
+
+/* TIMER DETAIL */
+.timer-detail-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center;margin-bottom:16px}
+.timer-circle-large{width:200px;height:200px;margin:0 auto 16px;position:relative}
+.progress-ring-lg{width:100%;height:100%;transform:rotate(-90deg)}
+.timer-center-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.timer-current{font-size:42px;font-weight:900;font-family:'Inter',sans-serif;background:linear-gradient(135deg,var(--purple),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.timer-separator{font-size:18px;color:var(--text2)}
+.timer-limit{font-size:18px;color:var(--text2);font-weight:600}
+.timer-unit{font-size:12px;color:var(--text2)}
+.timer-status{font-size:14px;color:var(--text2);margin-bottom:12px}
+.session-info{display:flex;justify-content:space-around;margin-bottom:16px;font-size:13px;color:var(--text2)}
+.session-time{font-weight:700;color:var(--text)}
+
+/* CHART */
+.history-card,.sessions-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;margin-bottom:16px}
+.chart-container{display:flex;align-items:flex-end;justify-content:space-around;height:150px;padding-top:10px}
+.chart-bar-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.chart-bar{width:28px;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--purple),var(--blue));min-height:4px;transition:height .5s ease}
+.chart-label{font-size:11px;color:var(--text2)}
+.chart-value{font-size:10px;color:var(--text2);font-weight:600}
+.sessions-list{display:flex;flex-direction:column;gap:8px}
+.session-item{display:flex;justify-content:space-between;padding:10px 14px;background:var(--glass);border-radius:10px;font-size:13px}
+.empty-state{text-align:center;padding:20px;color:var(--text2);font-size:14px}

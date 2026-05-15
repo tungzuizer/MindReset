@@ -1,0 +1,24 @@
+/* ANIMATIONS */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes slideIn{from{transform:translateX(100px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes petBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes shadowPulse{0%,100%{transform:scaleX(1);opacity:.2}50%{transform:scaleX(.8);opacity:.1}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes floatUp{0%{transform:translateY(100%) scale(0);opacity:0}10%{opacity:.6}90%{opacity:.2}100%{transform:translateY(-100vh) scale(1);opacity:0}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 10px rgba(108,92,231,.3))}50%{filter:drop-shadow(0 0 25px rgba(108,92,231,.6))}}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--glass);border-radius:2px}
+
+/* RESPONSIVE */
+@media(max-width:360px){
+  .pet-selection-grid{grid-template-columns:repeat(2,1fr)}
+  .pet-emoji{font-size:60px}
+  .onboard-title{font-size:26px}
+}

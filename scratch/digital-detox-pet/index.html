@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="MindResst - Giảm thời gian TikTok, nuôi thú cưng ảo, hoàn thành nhiệm vụ detox">
+  <title>MindResst 🐾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== AUTHENTICATION ===== -->
+  <div id="auth-container" class="auth-container">
+    <div class="auth-box">
+      <div class="auth-header">
+        <div class="auth-logo">🌿</div>
+        <h2>MindResst</h2>
+        <p id="auth-subtitle">Chào mừng bạn trở lại!</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="form-login" class="auth-form active">
+        <div class="form-group">
+          <label>Tên đăng nhập</label>
+          <input type="text" id="login-username" class="input-field" placeholder="Nhập tên đăng nhập" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu</label>
+          <input type="password" id="login-password" class="input-field" placeholder="Nhập mật khẩu" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn-primary w-100">Đăng Nhập</button>
+        <button type="button" class="btn-secondary w-100" id="btn-demo-login" style="margin-top:10px; background:rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 12px; font-weight: 700; cursor: pointer;">Chế Độ Demo (Thử ngay)</button>
+        <p class="auth-switch">Chưa có tài khoản? <a href="#" id="link-register">Đăng ký ngay</a></p>
+      </form>
+
+      <!-- Register Form -->
+      <form id="form-register" class="auth-form">
+        <div class="form-group">
+          <label>Tên đăng nhập</label>
+          <input type="text" id="register-username" class="input-field" placeholder="Nhập tên đăng nhập" required autocomplete="username" maxlength="20">
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu</label>
+          <input type="password" id="register-password" class="input-field" placeholder="Nhập mật khẩu" required autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label>Xác nhận mật khẩu</label>
+          <input type="password" id="register-confirm" class="input-field" placeholder="Nhập lại mật khẩu" required autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn-primary w-100">Tạo Tài Khoản</button>
+        <p class="auth-switch">Đã có tài khoản? <a href="#" id="link-login">Đăng nhập</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== ONBOARDING ===== -->
+  <div id="onboarding" class="onboarding hidden">
+    <!-- Step 1: Welcome -->
+    <div class="onboard-step active" data-step="1">
+      <div class="onboard-content">
+        <div class="onboard-icon">🌿</div>
+        <h1 class="onboard-title">MindResst</h1>
+        <p class="onboard-subtitle">Giảm thời gian TikTok.<br>Nuôi thú cưng ảo của bạn.</p>
+        <div class="onboard-features">
+          <div class="feature-item"><span class="feature-icon">⏱️</span> Giới hạn TikTok thông minh</div>
+          <div class="feature-item"><span class="feature-icon">🐾</span> Nuôi thú cưng đáng yêu</div>
+          <div class="feature-item"><span class="feature-icon">🏆</span> Xếp hạng & Kết bạn</div>
+        </div>
+        <button class="btn-primary" id="btn-next-1">Bắt Đầu Hành Trình</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Choose Pet -->
+    <div class="onboard-step" data-step="2">
+      <div class="onboard-content">
+        <h2 class="onboard-title">Chọn Thú Cưng</h2>
+        <p class="onboard-subtitle">Bạn muốn nuôi bạn đồng hành nào?</p>
+        <div class="pet-selection-grid">
+          <div class="pet-card" data-pet="cat">
+            <div class="pet-card-avatar">🐱</div>
+            <div class="pet-card-name">Mèo</div>
+            <div class="pet-card-desc">Tinh nghịch & Dễ thương</div>
+          </div>
+          <div class="pet-card" data-pet="dog">
+            <div class="pet-card-avatar">🐶</div>
+            <div class="pet-card-name">Chó</div>
+            <div class="pet-card-desc">Trung thành & Năng động</div>
+          </div>
+          <div class="pet-card" data-pet="dragon">
+            <div class="pet-card-avatar">🐲</div>
+            <div class="pet-card-name">Rồng</div>
+            <div class="pet-card-desc">Mạnh mẽ & Huyền bí</div>
+          </div>
+          <div class="pet-card" data-pet="rabbit">
+            <div class="pet-card-avatar">🐰</div>
+            <div class="pet-card-name">Thỏ</div>
+            <div class="pet-card-desc">Ngọt ngào & Nhẹ nhàng</div>
+          </div>
+          <div class="pet-card" data-pet="hamster">
+            <div class="pet-card-avatar">🐹</div>
+            <div class="pet-card-name">Hamster</div>
+            <div class="pet-card-desc">Nhỏ bé & Đáng yêu</div>
+          </div>
+        </div>
+        <input type="text" id="pet-name-input" class="input-field" placeholder="Đặt tên cho thú cưng..." maxlength="15" autocomplete="off">
+        <button class="btn-primary" id="btn-next-2" disabled>Tiếp Theo</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Set Limit -->
+    <div class="onboard-step" data-step="3">
+      <div class="onboard-content">
+        <div class="onboard-icon">⏱️</div>
+        <h2 class="onboard-title">Giới Hạn TikTok</h2>
+        <p class="onboard-subtitle">Đặt thời gian tối đa sử dụng TikTok mỗi ngày</p>
+        <div class="limit-selector">
+          <button class="limit-btn" data-limit="15">15 phút</button>
+          <button class="limit-btn" data-limit="30">30 phút</button>
+          <button class="limit-btn active" data-limit="60">1 giờ</button>
+          <button class="limit-btn" data-limit="90">1.5 giờ</button>
+          <button class="limit-btn" data-limit="120">2 giờ</button>
+        </div>
+        <div class="break-setting">
+          <p class="break-label">⏸️ Nghỉ bắt buộc sau mỗi:</p>
+          <div class="break-selector">
+            <button class="break-btn" data-break="10">10 phút</button>
+            <button class="break-btn active" data-break="15">15 phút</button>
+            <button class="break-btn" data-break="20">20 phút</button>
+            <button class="break-btn" data-break="30">30 phút</button>
+          </div>
+          <p class="break-note">Bạn sẽ phải nghỉ 5 phút trước khi tiếp tục</p>
+        </div>
+        <button class="btn-primary" id="btn-start">🚀 Bắt Đầu!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN APP ===== -->
+  <div id="app" class="app hidden">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="user-avatar" id="header-avatar">🐱</div>
+        <div class="header-info">
+          <span class="header-username" id="header-username">User</span>
+          <span class="header-level" id="header-level">Lv. 1</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="coin-display">
+          <span class="coin-icon">🪙</span>
+          <span id="header-coins">0</span>
+        </div>
+        <button class="btn-icon" id="btn-settings" aria-label="Settings">⚙️</button>
+      </div>
+    </header>
+
+    <!-- Pages Container -->
+    <main class="pages-container">
+      <!-- ===== GARDEN PAGE ===== -->
+      <section class="page" id="page-garden">
+        <div class="garden-scene" id="garden-scene">
+          <div class="speech-bubble" id="pet-speech">Xin chào bạn!</div>
+          <div class="pet-hero-container" id="pet-hero-trigger">
+            <div class="pet-hero" id="garden-pet">🐱</div>
+          </div>
+          <!-- Furniture will be injected here -->
+        </div>
+        
+        <div class="garden-stats">
+          <div class="stat-box">
+            <span class="stat-label">Vui vẻ</span>
+            <span class="stat-val" id="garden-happiness">100%</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Thể lực</span>
+            <span class="stat-val" id="garden-energy">100%</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Sức khỏe</span>
+            <span class="stat-val" id="garden-health">100%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HOME PAGE ===== -->
+      <section class="page active" id="page-home">
+        <!-- Pet Display Area -->
+        <div class="pet-display-area">
+          <div class="pet-background">
+            <div class="floating-particles" id="particles"></div>
+            <div class="pet-stage">
+              <div class="pet-character" id="pet-character">
+                <div class="pet-emoji" id="pet-emoji">🐱</div>
+                <div class="pet-mood-indicator" id="pet-mood">💚</div>
+              </div>
+              <div class="pet-shadow"></div>
+            </div>
+          </div>
+          <div class="pet-info-bar">
+            <h2 class="pet-name" id="pet-name">Mèo con</h2>
+            <div class="pet-level-badge" id="pet-level-badge">Lv. 1</div>
+          </div>
+          <div class="pet-stats-row">
+            <div class="pet-stat">
+              <span class="stat-label">❤️ HP</span>
+              <div class="stat-bar"><div class="stat-fill hp" id="bar-hp" style="width:100%"></div></div>
+              <span class="stat-value" id="val-hp">100</span>
+            </div>
+            <div class="pet-stat">
+              <span class="stat-label">😊 Vui</span>
+              <div class="stat-bar"><div class="stat-fill happy" id="bar-happy" style="width:80%"></div></div>
+              <span class="stat-value" id="val-happy">80</span>
+            </div>
+            <div class="pet-stat">
+              <span class="stat-label">⚡ NL</span>
+              <div class="stat-bar"><div class="stat-fill energy" id="bar-energy" style="width:100%"></div></div>
+              <span class="stat-value" id="val-energy">100</span>
+            </div>
+          </div>
+          <div class="xp-bar-container">
+            <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:0%"></div></div>
+            <span class="xp-text" id="xp-text">0 / 100 XP</span>
+          </div>
+        </div>
+
+        <!-- Quick Timer Widget -->
+        <div class="timer-widget">
+          <div class="timer-header">
+            <div class="timer-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/100px-TikTok_logo.svg.png" alt="TikTok" class="tiktok-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span style="display:none">📱</span>
+            </div>
+            <div class="timer-info">
+              <span class="timer-title">TikTok Hôm Nay</span>
+              <span class="timer-usage" id="home-usage">0 / 60 phút</span>
+            </div>
+          </div>
+          <div class="timer-progress-ring" id="timer-ring-container">
+            <svg class="progress-ring" viewBox="0 0 120 120">
+              <circle class="progress-ring-bg" cx="60" cy="60" r="52"/>
+              <circle class="progress-ring-fill" id="timer-ring" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="timer-ring-text">
+              <span class="timer-percent" id="timer-percent">0%</span>
+            </div>
+          </div>
+          <div class="timer-actions">
+            <button class="btn-timer-start" id="btn-timer-toggle">
+              <span class="btn-timer-icon">▶️</span>
+              <span class="btn-timer-text">Bắt đầu dùng TikTok</span>
+            </button>
+          </div>
+          <div class="break-alert hidden" id="break-alert">
+            <div class="break-alert-icon">☕</div>
+            <p class="break-alert-text">Nghỉ ngơi đi! Thú cưng của bạn cần bạn</p>
+            <div class="break-countdown" id="break-countdown">5:00</div>
+          </div>
+        </div>
+
+        <!-- Today's Quick Tasks -->
+        <div class="quick-tasks">
+          <h3 class="section-title">📋 Nhiệm Vụ Hôm Nay</h3>
+          <div class="quick-task-list" id="home-tasks"></div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements-card">
+          <h3 class="section-title">🏆 Thành Tựu</h3>
+          <div class="achievements-grid" id="home-achievements"></div>
+        </div>
+
+        <!-- Daily Journal -->
+        <div class="journal-card">
+          <div class="journal-card-header">
+            <h3 class="section-title">📝 Nhật Ký Detox</h3>
+            <button class="btn-text" id="btn-add-journal">+ Viết mới</button>
+          </div>
+          <div class="journal-list" id="journal-list"></div>
+        </div>
+      </section>
+
+      <!-- ===== TIMER PAGE ===== -->
+      <section class="page" id="page-timer">
+        <h2 class="page-title">⏱️ Quản Lý Thời Gian</h2>
+        
+        <div class="timer-detail-card">
+          <div class="timer-circle-large">
+            <svg class="progress-ring-lg" viewBox="0 0 200 200">
+              <circle class="progress-ring-bg" cx="100" cy="100" r="88"/>
+              <circle class="progress-ring-fill-lg" id="timer-ring-lg" cx="100" cy="100" r="88"/>
+            </svg>
+            <div class="timer-center-text">
+              <span class="timer-current" id="timer-current">0</span>
+              <span class="timer-separator">/</span>
+              <span class="timer-limit" id="timer-limit">60</span>
+              <span class="timer-unit">phút</span>
+            </div>
+          </div>
+          <div class="timer-status" id="timer-status">Chưa sử dụng hôm nay</div>
+          <div class="session-info" id="session-info">
+            <span class="session-label">Phiên hiện tại:</span>
+            <span class="session-time" id="session-time">0:00</span>
+            <span class="session-break">Nghỉ sau: <strong id="break-after">15:00</strong></span>
+          </div>
+          <button class="btn-timer-main" id="btn-timer-main">
+            <span id="timer-main-icon">▶️</span>
+            <span id="timer-main-text">Bắt Đầu Phiên TikTok</span>
+          </button>
+        </div>
+
+        <!-- Usage History -->
+        <div class="history-card">
+          <h3 class="section-title">📊 Thống Kê 7 Ngày</h3>
+          <div class="chart-container" id="usage-chart"></div>
+        </div>
+
+        <!-- Today's Sessions -->
+        <div class="sessions-card">
+          <h3 class="section-title">📝 Phiên Hôm Nay</h3>
+          <div class="sessions-list" id="sessions-list">
+            <div class="empty-state">Chưa có phiên nào hôm nay</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TASKS PAGE ===== -->
+      <section class="page" id="page-tasks">
+        <h2 class="page-title">✅ Nhiệm Vụ Detox</h2>
+
+        <div class="tasks-tabs">
+          <button class="task-tab active" data-tab="daily">Hàng Ngày</button>
+          <button class="task-tab" data-tab="weekly">Hàng Tuần</button>
+          <button class="task-tab" data-tab="special">Đặc Biệt</button>
+        </div>
+
+        <div class="tasks-content">
+          <div class="task-list" id="task-list-daily"></div>
+          <div class="task-list hidden" id="task-list-weekly"></div>
+          <div class="task-list hidden" id="task-list-special"></div>
+        </div>
+      </section>
+
+      <!-- ===== STORE PAGE ===== -->
+      <section class="page" id="page-store">
+        <h2 class="page-title">🛒 Cửa Hàng</h2>
+        
+        <div class="store-balance">
+          <span class="store-balance-text">Số dư của bạn:</span>
+          <div class="coin-display large">
+            <span class="coin-icon">🪙</span>
+            <span id="store-coins">0</span>
+          </div>
+        </div>
+
+        <div class="store-tabs">
+          <button class="store-tab active" data-stab="food">🍎 Đồ Ăn</button>
+          <button class="store-tab" data-stab="toys">⚽ Đồ Chơi</button>
+          <button class="store-tab" data-stab="furniture">🌿 Nội Thất</button>
+        </div>
+
+        <div class="store-grid" id="store-grid">
+          <!-- Store items will be rendered here -->
+        </div>
+      </section>
+
+      <!-- ===== RANKING PAGE ===== -->
+      <section class="page" id="page-ranking">
+        <h2 class="page-title">🏆 Bảng Xếp Hạng</h2>
+
+        <div class="ranking-tabs">
+          <button class="rank-tab active" data-rtab="global">🌍 Toàn Cầu</button>
+          <button class="rank-tab" data-rtab="friends">👥 Bạn Bè</button>
+        </div>
+
+        <div class="ranking-category">
+          <button class="cat-btn active" data-cat="level">Level</button>
+          <button class="cat-btn" data-cat="streak">Streak</button>
+          <button class="cat-btn" data-cat="tasks">Nhiệm vụ</button>
+        </div>
+
+        <!-- Top 3 Podium -->
+        <div class="podium" id="podium"></div>
+
+        <!-- Rest of leaderboard -->
+        <div class="leaderboard" id="leaderboard"></div>
+      </section>
+
+      <!-- ===== FRIENDS PAGE ===== -->
+      <section class="page" id="page-friends">
+        <h2 class="page-title">👥 Bạn Bè</h2>
+
+        <div class="friends-header">
+          <div class="friend-search">
+            <input type="text" class="input-field" id="friend-search" placeholder="🔍 Tìm bạn bè..." autocomplete="off">
+          </div>
+          <button class="btn-add-friend" id="btn-add-friend">+ Thêm Bạn</button>
+        </div>
+
+        <!-- Friend Requests -->
+        <div class="friend-requests" id="friend-requests">
+          <h3 class="section-title">📩 Lời Mời Kết Bạn</h3>
+          <div class="request-list" id="request-list"></div>
+        </div>
+
+        <!-- Friends List -->
+        <div class="friends-list-section">
+          <h3 class="section-title">💫 Bạn Bè (<span id="friend-count">0</span>)</h3>
+          <div class="friends-list" id="friends-list"></div>
+        </div>
+
+        <!-- Activity Feed -->
+        <div class="activity-feed">
+          <h3 class="section-title">📢 Hoạt Động</h3>
+          <div class="feed-list" id="feed-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home" id="nav-home">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Nhà</span>
+      </button>
+      <button class="nav-item" data-page="garden" id="nav-garden">
+        <span class="nav-icon">🌿</span>
+        <span class="nav-label">Khu Vườn</span>
+      </button>
+      <button class="nav-item" data-page="timer" id="nav-timer">
+        <span class="nav-icon">⏱️</span>
+        <span class="nav-label">Timer</span>
+      </button>
+      <button class="nav-item" data-page="tasks" id="nav-tasks">
+        <span class="nav-icon">✅</span>
+        <span class="nav-label">Nhiệm Vụ</span>
+      </button>
+      <button class="nav-item" data-page="store" id="nav-store">
+        <span class="nav-icon">🛒</span>
+        <span class="nav-label">Cửa Hàng</span>
+      </button>
+      <button class="nav-item" data-page="ranking" id="nav-ranking">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-label">Xếp Hạng</span>
+      </button>
+      <button class="nav-item" data-page="friends" id="nav-friends">
+        <span class="nav-icon">👥</span>
+        <span class="nav-label">Bạn Bè</span>
+      </button>
+    </nav>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay hidden" id="settings-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>⚙️ Cài Đặt</h2>
+          <button class="btn-close" id="btn-close-settings">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-group">
+            <label class="setting-label">Giới hạn TikTok (phút/ngày)</label>
+            <input type="range" id="setting-limit" min="10" max="180" value="60" class="range-input">
+            <span class="range-value" id="setting-limit-val">60 phút</span>
+          </div>
+          <div class="setting-group">
+            <label class="setting-label">Nghỉ bắt buộc sau (phút)</label>
+            <input type="range" id="setting-break" min="5" max="30" value="15" class="range-input">
+            <span class="range-value" id="setting-break-val">15 phút</span>
+          </div>
+          <div class="setting-group">
+            <label class="setting-label">Tên thú cưng</label>
+            <input type="text" id="setting-pet-name" class="input-field" maxlength="15" autocomplete="off">
+          </div>
+          <button class="btn-primary" id="btn-save-settings">💾 Lưu Cài Đặt</button>
+          <button class="btn-danger" id="btn-logout">🚪 Đăng Xuất</button>
+          <button class="btn-danger" id="btn-reset">🗑️ Reset Tất Cả</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+    <!-- Level Up Modal -->
+    <div class="modal-overlay hidden" id="levelup-modal">
+      <div class="modal levelup-modal">
+        <div class="levelup-content">
+          <div class="levelup-icon">🎉</div>
+          <h2 class="levelup-title">Level Up!</h2>
+          <div class="levelup-pet" id="levelup-pet">🐱</div>
+          <p class="levelup-text" id="levelup-text">Thú cưng đã lên Level 2!</p>
+          <div class="levelup-rewards" id="levelup-rewards"></div>
+          <button class="btn-primary" id="btn-close-levelup">Tuyệt Vời! 🎊</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Friend Modal -->
+    <div class="modal-overlay hidden" id="add-friend-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>➕ Thêm Bạn Bè</h2>
+          <button class="btn-close" id="btn-close-add-friend">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Nhập tên người bạn muốn kết bạn:</p>
+          <input type="text" class="input-field" id="add-friend-input" placeholder="Tên người dùng..." autocomplete="off">
+          <button class="btn-primary" id="btn-send-request">📨 Gửi Lời Mời</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journal Modal -->
+    <div class="modal-overlay hidden" id="journal-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>📝 Nhật Ký Hôm Nay</h2>
+          <button class="btn-close" id="btn-close-journal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Bạn cảm thấy thế nào hôm nay?</p>
+          <div class="mood-selector">
+            <button class="mood-btn" data-mood="🤩">🤩</button>
+            <button class="mood-btn" data-mood="😊">😊</button>
+            <button class="mood-btn" data-mood="😐">😐</button>
+            <button class="mood-btn" data-mood="😫">😫</button>
+            <button class="mood-btn" data-mood="💪">💪</button>
+          </div>
+          <textarea id="journal-input" class="input-field" placeholder="Ghi lại cảm xúc hoặc những gì bạn đã làm được..." rows="4"></textarea>
+          <button class="btn-primary" id="btn-save-journal">Lưu Nhật Ký</button>
+        </div>
+      </div>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
