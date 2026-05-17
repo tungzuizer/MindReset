@@ -1,13 +1,13 @@
-:root{--bg:#0a0a1a;--surface:rgba(255,255,255,.05);--glass:rgba(255,255,255,.08);--border:rgba(255,255,255,.1);--text:#e8e8f0;--text2:#a0a0b8;--purple:#6C5CE7;--blue:#0984E3;--mint:#00B894;--pink:#fd79a8;--red:#e74c3c;--orange:#f39c12;--gold:#ffd700;--radius:16px;--nav-h:70px}
+:root{--bg:#0a0a1a;--surface:rgba(255,255,255,.05);--glass:rgba(255,255,255,.08);--border:rgba(255,255,255,.1);--text:#e8e8f0;--text2:#a0a0b8;--purple:#6C5CE7;--blue:#0984E3;--mint:#00B894;--pink:#fd79a8;--red:#e74c3c;--orange:#f39c12;--gold:#ffd700;--radius:20px;--nav-h:70px}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
-h1,h2,h3{font-family:'Inter',sans-serif}
+body{font-family:'Baloo 2',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+h1,h2,h3{font-family:'Baloo 2',sans-serif}
 .hidden{display:none!important}
 .input-field{width:100%;padding:14px 18px;background:var(--glass);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:16px;outline:none;transition:.3s}
 .input-field:focus{border-color:var(--purple);box-shadow:0 0 20px rgba(108,92,231,.3)}
-.btn-primary{width:100%;padding:16px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:14px;color:#fff;font-size:17px;font-weight:700;cursor:pointer;transition:.3s;font-family:'Nunito',sans-serif}
+.btn-primary{width:100%;padding:16px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:14px;color:#fff;font-size:17px;font-weight:700;cursor:pointer;transition:.3s;font-family:'Baloo 2',sans-serif}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(108,92,231,.4)}
 .btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none}
-.btn-danger{width:100%;padding:14px;background:rgba(231,76,60,.15);border:1px solid rgba(231,76,60,.3);border-radius:14px;color:var(--red);font-size:15px;font-weight:600;cursor:pointer;margin-top:10px;font-family:'Nunito',sans-serif}
+.btn-danger{width:100%;padding:14px;background:rgba(231,76,60,.15);border:1px solid rgba(231,76,60,.3);border-radius:14px;color:var(--red);font-size:15px;font-weight:600;cursor:pointer;margin-top:10px;font-family:'Baloo 2',sans-serif}
 .btn-icon{background:none;border:none;font-size:22px;cursor:pointer;padding:8px}
 .section-title{font-size:16px;font-weight:700;margin-bottom:12px;color:var(--text)}

@@ -2,7 +2,7 @@
 .friends-header{display:flex;gap:10px;margin-bottom:16px}
 .friend-search{flex:1}
 .friend-search .input-field{padding:12px 16px}
-.btn-add-friend{padding:12px 18px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:12px;color:#fff;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Nunito',sans-serif;font-size:13px}
+.btn-add-friend{padding:12px 18px;background:linear-gradient(135deg,var(--purple),var(--blue));border:none;border-radius:12px;color:#fff;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Baloo 2',sans-serif;font-size:13px}
 .friend-requests{margin-bottom:20px}
 .request-list,.friends-list,.feed-list{display:flex;flex-direction:column;gap:8px}
 .request-item{display:flex;align-items:center;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
@@ -11,7 +11,7 @@
 .request-name{font-weight:700;font-size:14px}
 .request-pet{font-size:12px;color:var(--text2)}
 .request-actions{display:flex;gap:6px}
-.btn-accept,.btn-reject{padding:8px 14px;border:none;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif}
+.btn-accept,.btn-reject{padding:8px 14px;border:none;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Baloo 2',sans-serif}
 .btn-accept{background:var(--mint);color:#fff}
 .btn-reject{background:rgba(231,76,60,.2);color:var(--red)}
 .friend-item{display:flex;align-items:center;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:14px}

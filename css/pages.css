@@ -1,7 +1,7 @@
 /* TASKS */
 .page-title{font-size:24px;font-weight:800;margin-bottom:20px}
 .tasks-tabs,.ranking-tabs{display:flex;gap:8px;margin-bottom:16px}
-.task-tab,.rank-tab{flex:1;padding:10px;background:var(--glass);border:1px solid var(--border);border-radius:12px;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:.3s;font-family:'Nunito',sans-serif}
+.task-tab,.rank-tab{flex:1;padding:10px;background:var(--glass);border:1px solid var(--border);border-radius:12px;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:.3s;font-family:'Baloo 2',sans-serif}
 .task-tab.active,.rank-tab.active{background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border-color:transparent}
 .task-item{display:flex;align-items:center;gap:12px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:16px;margin-bottom:10px;transition:.3s}
 .task-item.completed{opacity:.6;border-color:var(--mint)}
@@ -16,7 +16,7 @@
 
 /* RANKING */
 .ranking-category{display:flex;gap:6px;margin-bottom:20px}
-.cat-btn{padding:8px 16px;background:var(--glass);border:1px solid var(--border);border-radius:20px;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Nunito',sans-serif}
+.cat-btn{padding:8px 16px;background:var(--glass);border:1px solid var(--border);border-radius:20px;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Baloo 2',sans-serif}
 .cat-btn.active{background:var(--purple);color:#fff;border-color:var(--purple)}
 .podium{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin-bottom:24px;min-height:200px}
 .podium-item{display:flex;flex-direction:column;align-items:center;padding:12px;border-radius:16px;background:var(--surface);border:1px solid var(--border);transition:.3s}

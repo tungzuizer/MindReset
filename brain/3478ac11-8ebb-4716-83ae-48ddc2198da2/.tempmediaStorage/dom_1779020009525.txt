@@ -1,0 +1,48 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🐉
+DemoUser
+Lv. 12
+🪙
+500
+[0] (689,49)<button aria-label='Settings' class='btn-icon' id='btn-settings'>⚙️ />
+[1] (500,267)<div  />
+	[2] (500,267)<div >🐉 />
+	[3] (550,188)<div >💚 />
+Rồng Demo
+Lv. 12
+❤️ HP
+100
+😊 Vui
+85
+⚡ NL
+90
+240 / 410 XP
+📱
+TikTok Hôm Nay
+0 / 60 phút
+0%
+▶️
+Bắt đầu dùng TikTok
+[4] (305,963)<button class='nav-item active' id='nav-home' />
+	[5] (305,956)<span >🏠 />
+	[6] (305,984)<span >Nhà />
+[7] (370,963)<button class='nav-item' id='nav-garden' />
+	[8] (370,956)<span >🌿 />
+	[9] (370,984)<span >Khu Vườn />
+⏱️
+Timer
+✅
+Nhiệm Vụ
+🛒
+Cửa Hàng
+[10] (632,963)<button class='nav-item' id='nav-ranking' />
+	[11] (632,956)<span >🏆 />
+	[12] (632,984)<span >Xếp Hạng />
+[13] (695,963)<button class='nav-item' id='nav-friends' />
+	[14] (695,956)<span >👥 />
+	[15] (695,984)<span >Bạn Bè />
+
+</current_dom>

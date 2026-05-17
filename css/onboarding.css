@@ -22,7 +22,7 @@
 
 /* LIMIT SELECTOR */
 .limit-selector{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:24px}
-.limit-btn,.break-btn{padding:12px 20px;background:var(--glass);border:2px solid var(--border);border-radius:12px;color:var(--text);font-size:14px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Nunito',sans-serif}
+.limit-btn,.break-btn{padding:12px 20px;background:var(--glass);border:2px solid var(--border);border-radius:12px;color:var(--text);font-size:14px;font-weight:600;cursor:pointer;transition:.3s;font-family:'Baloo 2',sans-serif}
 .limit-btn.active,.break-btn.active{border-color:var(--purple);background:rgba(108,92,231,.2);color:var(--purple)}
 .break-setting{margin-bottom:24px}
 .break-label{font-weight:700;margin-bottom:12px;font-size:15px}
